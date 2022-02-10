@@ -21,6 +21,15 @@
       <Filter>Contents</Filter>
     </ClCompile>
     <ClCompile Include="ConsoleScreen.cpp" />
+    <ClCompile Include="ConsoleObject.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleGlobalInst.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConsoleMath.h">
@@ -30,6 +39,15 @@
       <Filter>Engine</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleObject.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleGlobalInst.h">
       <Filter>Contents</Filter>
     </ClInclude>
   </ItemGroup>

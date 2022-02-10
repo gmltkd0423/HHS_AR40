@@ -139,7 +139,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ConsoleGlobalInst.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="ConsoleMath.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="ConsoleObject.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
       <SubType>
       </SubType>
     </ClInclude>
@@ -153,11 +165,23 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ConsoleGlobalInst.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="ConsoleMath.cpp">
       <SubType>
       </SubType>
     </ClCompile>
+    <ClCompile Include="ConsoleObject.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="ConsoleScreen.cpp" />
+    <ClCompile Include="Monster.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="Player.cpp">
       <SubType>
       </SubType>

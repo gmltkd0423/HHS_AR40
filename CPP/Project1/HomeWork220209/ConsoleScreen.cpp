@@ -27,5 +27,11 @@ int main()
         NewPlayer.Render();
         NewScreen.PrintScreen();
         NewPlayer.Update();
+
+        if (NewPlayer.flag == true)
+        {
+            std::cout << "게임을 종료합니다" << std::endl;
+            return 0;
+        }
     }
 }

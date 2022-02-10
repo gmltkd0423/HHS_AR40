@@ -23,6 +23,14 @@ public:
 		return Size_;
 	}
 
+	int GetXSize()
+	{
+		return Size_.x_;
+	}
+	int GetYSize()
+	{
+		return Size_.y_;
+	}
 	// 화면의 글자를 동적으로 할당하여 메모리를 만들어내는 작업
 	void CreateScreen(int _Width, int _Height, const char* _DefaultValue);
 
@@ -36,9 +44,6 @@ public:
 	void SetPixel(ConsoleVector _Pos, const char* _DefaultValue);
 	void SetPixel(int _X, int _Y, const char* _DefaultValue);
 
-	void CheckPos(ConsoleVector _Pos);
-	void CheckPos(int _X, int _Y);
-
 
 
 protected:
@@ -49,3 +54,4 @@ private:
 	char DefaultPixel_[3];
 
 };
+

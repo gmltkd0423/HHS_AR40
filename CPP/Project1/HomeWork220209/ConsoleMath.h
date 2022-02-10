@@ -20,7 +20,6 @@ private:
 
 };
 
-
 class ConsoleVector
 {
 public:
