@@ -1,6 +1,6 @@
 #include "Head.h"
 #include <conio.h>
-
+#include <list>
 
 Head::Head()
 {
@@ -8,6 +8,13 @@ Head::Head()
 
 Head::~Head() 
 {
+	std::list<Body*>::iterator iter = AllBody.begin();
+	std::list<Body*>::iterator iterEnd = AllBody.end();
+
+	for (; iter != iterEnd; ++iter)
+	{
+		delete (*iter);
+	}
 }
 
 
