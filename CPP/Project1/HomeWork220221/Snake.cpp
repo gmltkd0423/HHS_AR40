@@ -51,7 +51,8 @@ int main()
 		}
 	}
 
-	NewHead->Release();
-	NewBody->Release();
+	delete NewHead;
+	delete NewBody;
+
 	ConsoleScreen::Destroy();
 }

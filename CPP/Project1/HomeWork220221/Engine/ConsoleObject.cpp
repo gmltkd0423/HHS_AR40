@@ -67,15 +67,6 @@ void ConsoleObject::InScreenMovement(const ConsoleVector& _Vector)
 	SetMove(_Vector);
 }
 
-void ConsoleObject::Release()
-{
-	if (nullptr != this)
-	{
-		delete this;
-	}
-}
-
-
 void ConsoleObject::SetRenderChar(const char* _Text)
 {
 

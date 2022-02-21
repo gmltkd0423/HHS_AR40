@@ -15,7 +15,7 @@ public:
 		const char* _Text, 
 		const ConsoleVector& _Pos);
 
-	~ConsoleObject();
+	virtual ~ConsoleObject();
 
 	// delete Function
 	ConsoleObject(const ConsoleObject& _Other) = delete;
@@ -42,7 +42,6 @@ public:
 	virtual void Update();
 	virtual void Render();
 	virtual void OverLap(ConsoleObject* _Other);
-	virtual void Release();
 	bool OverLapCheck(const ConsoleObject* _Other);
 
 

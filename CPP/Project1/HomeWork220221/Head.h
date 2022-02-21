@@ -20,7 +20,6 @@ protected:
 	void Update() override;
 
 	void OverLap(ConsoleObject* _Other);
-	void Release();
 
 private:
 	std::list<Body*> AllBody;

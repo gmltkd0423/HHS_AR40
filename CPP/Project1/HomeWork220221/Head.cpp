@@ -8,12 +8,17 @@ Head::Head()
 
 Head::~Head() 
 {
-	std::list<Body*>::iterator iter = AllBody.begin();
-	std::list<Body*>::iterator iterEnd = AllBody.end();
-
-	for (; iter != iterEnd; ++iter)
+	if (!AllBody.empty())
 	{
-		delete (*iter);
+		std::list<Body*>::iterator iter = AllBody.begin();
+		std::list<Body*>::iterator iterEnd = AllBody.end();
+
+		for (; iter != iterEnd; ++iter)
+		{
+			delete (*iter);
+			(*iter) = nullptr;
+		}
+		AllBody.clear();
 	}
 }
 
@@ -59,12 +64,4 @@ void Head::Update()
 void Head::OverLap(ConsoleObject* _Link)
 {
 	AllBody.push_back((Body*)_Link);
-}
-
-void Head::Release()
-{
-	if (this != nullptr)
-	{
-		delete this;
-	}
 }
