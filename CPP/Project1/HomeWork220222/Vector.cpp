@@ -105,11 +105,16 @@ int main()
     Vector.push_back(7);
     Vector.push_back(4);
 
+    for (size_t i = 0; i < Vector.size(); i++)
+    {
+        std::cout << Vector[i] << "  ";
+    }
+    std::cout << std::endl << std::endl;
     //내림차순 정렬
     Vector.Sort();
 
     for (size_t i = 0; i < Vector.size(); i++)
     {
-        std::cout << Vector[i] << std::endl;
+        std::cout << Vector[i] << "  ";
     }
 }
