@@ -116,6 +116,7 @@ private:
             if (nullptr != RightChild_)
             {
                 return RightChild_->MinNode();
+
             }
 
             return OverParent(Pair_.first);
@@ -173,6 +174,28 @@ private:
             return nullptr;
         }
 
+        void Delete()
+        {
+            MapNode* DelLeftNode = LeftChild_;
+
+             if (nullptr != DelLeftNode)
+             {
+                 DelLeftNode->Delete();
+                 delete DelLeftNode;
+                 DelLeftNode = nullptr;
+
+             }
+
+            MapNode* DelRightNode = RightChild_;
+
+             if (nullptr != DelRightNode)
+             {
+                 DelRightNode->Delete();
+                 delete DelRightNode;
+                 DelRightNode = nullptr;
+             }
+        }
+
         bool Insert(const GamePair& _Pair)
         {
 
@@ -217,22 +240,6 @@ private:
             , RightChild_(nullptr)
         {
 
-        }
-
-        ~MapNode()
-        {
-            if (nullptr != LeftChild_)
-            {
-                delete LeftChild_;
-                LeftChild_ = nullptr;
-
-            }
-
-            if (nullptr != RightChild_)
-            {
-                delete RightChild_;
-                RightChild_ = nullptr;
-            }
         }
     };
 
@@ -323,6 +330,10 @@ public:
         RootNode_->LastOrder();
     }
 
+    void Delete()
+    {
+        RootNode_->Delete();
+    }
 public:
     GameMap()
         : RootNode_(nullptr)
@@ -332,6 +343,8 @@ public:
 
     ~GameMap()
     {
+        Delete();
+
         if (nullptr != RootNode_)
         {
             delete RootNode_;
@@ -389,7 +402,6 @@ int main()
         std::cout << std::endl;
         std::cout << "후위 순회" << std::endl;
         GMap.LastOrder(); // 후위순회
-
 
         //// 무조건 집어 넣어 놓고
         //{
